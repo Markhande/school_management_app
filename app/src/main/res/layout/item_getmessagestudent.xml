@@ -1,0 +1,168 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/getMessagebyRoleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/background_border_radius"
+            android:padding="16dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send By"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/global_specific_text_color_blue"/>
+                <TextView
+                    android:background="@drawable/bg_presenty"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:id="@+id/recipientType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recipient Type"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    tools:text="August, 2024" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/messageSendBy"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/forwardimage"
+                android:drawablePadding="8dp"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="@color/global_textview_color"
+                tools:text="Class Loading" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send To"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/global_specific_text_color_blue"/>
+
+            <TextView
+                android:id="@+id/searchSpecific"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/forwardimage"
+                android:drawablePadding="8dp"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="@color/global_textview_color"
+                tools:text="Class Loading" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:textSize="16sp"
+                android:text="Message :"
+                android:textColor="@color/global_specific_text_color_blue"
+                tools:text="Description" />
+
+            <TextView
+                android:id="@+id/messageContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                tools:text="Message content here" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+                    <ImageView
+                        android:src="@drawable/greendot"
+                        android:id="@+id/attachmentImage"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp"
+                        tools:ignore="ContentDescription" />
+                </androidx.cardview.widget.CardView>
+
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="80dp"
+                    android:gravity="end"
+                    android:layout_marginRight="16dp"
+                    android:paddingTop="10dp">
+
+                    <!-- Delete Button -->
+                    <ImageView
+                        android:id="@+id/deleteButton"
+                        android:src="@drawable/deletestudent"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginEnd="16dp"
+                        />
+
+                    <!-- Edit Button -->
+                    <ImageView
+                        android:id="@+id/editButton"
+                        android:src="@drawable/editstudent"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

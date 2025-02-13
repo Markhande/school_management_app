@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/layoutHomeWork"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/background_border_radius"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subject"
+                    android:textColor="@color/global_specific_text_color_blue"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+
+
+                <TextView
+                    android:background="@drawable/bg_presenty"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:visibility="visible"
+                    android:id="@+id/tvgetHomeworkDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date Loading.."
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:gravity="end"
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvgetHomeworkClass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading.."
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:drawableLeft="@drawable/forwardimage"
+                android:drawablePadding="8dp"
+                android:visibility="visible"
+                android:id="@+id/tvgetHomeworkSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject Loading.."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_weight="0.5"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send By"
+                android:textColor="@color/global_specific_text_color_blue"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <TextView
+                android:drawableLeft="@drawable/forwardimage"
+                android:drawablePadding="8dp"
+                android:visibility="visible"
+                android:id="@+id/tvgetHomeworkTeacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading.."
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+
+
+
+            <TextView
+                android:id="@+id/tvgetHomeworkDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="@color/global_specific_text_color_blue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:textAlignment="viewStart"
+                android:id="@+id/tvgetHomeworkDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is the homework detail."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+
+                <ImageView
+                    android:id="@+id/imgShowHomework"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/imagenotfound"/>
+
+
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+                    <ImageView
+                        android:id="@+id/ivEdit"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/edit"
+                        android:contentDescription="Edit Homework"
+                        android:layout_marginEnd="16dp" />
+                </androidx.cardview.widget.CardView>
+
+
+
+                <ImageView
+                    android:id="@+id/ivDelete"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/delete"
+                    android:contentDescription="Delete Homework" />
+            </LinearLayout>
+        </LinearLayout>
+</androidx.cardview.widget.CardView>

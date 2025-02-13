@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.UpdateClassWithSubject">
+
+    <!--  Heading Layout    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/heading_background">
+
+        <TextView
+            android:layout_weight="1.5"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:textColor="@color/heading_text_color"
+            android:textSize="@dimen/heading_text_size"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_weight="1.5"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:layout_marginLeft="10dp"
+
+            android:textColor="@color/heading_text_color"
+            android:textSize="@dimen/heading_text_size"
+
+
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold" />
+
+        <!--        android:drawableLeft="@drawable/student_cap_svgrepo_com"-->
+        <TextView
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject Edit"
+            android:drawableLeft="@drawable/student_cap_svgrepo_com"
+            android:textColor="@color/heading_text_color"
+            android:textSize="@dimen/title_text_size"
+            android:drawablePadding="8dp"
+
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_vertical"
+            android:textStyle="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Subject and Delete"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="@dimen/sub_heading_text_size"/>
+
+    <!-- Subject Name Field -->
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/subjectNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject Name:"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="16sp"/>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:hint="Class Name"
+            app:boxStrokeWidth="2dp"
+            app:hintTextAppearance="@style/CustomLabelTextAppearance"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxBackgroundColor="@color/background_color_textinpulayout"
+            android:layout_marginTop="10dp"
+            app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+            app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+            app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+            app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:focusable="false"
+                android:id="@+id/classes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Class Name"
+            app:startIconDrawable="@drawable/classroom_svgrepo_com"
+            app:boxStrokeWidth="2dp"
+            app:hintTextAppearance="@style/CustomLabelTextAppearance"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxBackgroundColor="@color/background_color_textinpulayout"
+            android:layout_marginTop="10dp"
+            app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+            app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+            app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+            app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:focusable="false"
+                android:id="@+id/classes2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:drawableLeft="@drawable/bookbook"
+                android:drawablePadding="5dp"
+                android:text="select Subject"
+                />
+
+            <Spinner
+                android:id="@+id/SelectClass"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/categoryConnectionLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                android:hint="Enter Category of Connection"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/categoryConnectionEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            app:startIconDrawable="@drawable/editsubject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Update Subject Name"
+            android:gravity="center_vertical"
+            app:boxStrokeWidth="2dp"
+            android:paddingBottom="10dp"
+            app:hintTextAppearance="@style/CustomLabelTextAppearance"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxBackgroundColor="@color/background_color_textinpulayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/subjectName"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Marks"
+            app:startIconDrawable="@drawable/eraser"
+            app:boxStrokeWidth="2dp"
+            app:hintTextAppearance="@style/CustomLabelTextAppearance"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxBackgroundColor="@color/background_color_textinpulayout"
+            app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+            app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+            app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+            app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/marks"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+<!--        android:visibility="gone"-->
+    <!-- Classes Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Subject ID"
+            app:boxStrokeWidth="2dp"
+            app:hintTextAppearance="@style/CustomLabelTextAppearance"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxBackgroundColor="@color/background_color_textinpulayout"
+            app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+            app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+            app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+            app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Etid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <!-- Add a Button to submit the data (Optional) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:layout_margin="10dp"
+                android:layout_weight="0.5"
+                android:id="@+id/submitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:textStyle="bold"
+                android:textColor="@color/global_button_text_color"
+                android:backgroundTint="@color/global_button_background"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:layout_margin="10dp"
+                android:layout_weight="0.5"
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:textStyle="bold"
+                android:textColor="@color/background_color_textinpulayout"
+                android:backgroundTint="#E57373"
+                android:layout_centerHorizontal="true"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

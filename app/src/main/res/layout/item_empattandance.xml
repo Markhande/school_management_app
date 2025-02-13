@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/listItemBody"
+    android:gravity="center"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/srNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="4dp"
+        android:text="Sr No."
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/TxtEmpName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employess Name"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="4dp"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:id="@+id/TxtEmpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:layout_marginRight="16dp"
+        android:textSize="16dp"
+        />
+<!--     <RadioGroup-->
+<!--        android:id="@+id/radioGroupStatus"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="19dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        >-->
+
+<!--        <RadioButton-->
+<!--            android:buttonTint="@color/radio_button_color_selector"-->
+<!--            android:id="@+id/radioButtonA"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            />-->
+
+
+<!--        <RadioButton-->
+<!--            android:buttonTint="@color/radio_button_color_selector"-->
+<!--            android:id="@+id/radioButtonB"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            />-->
+<!--        <RadioButton-->
+<!--            android:buttonTint="@color/radio_button_color_selector"-->
+<!--            android:id="@+id/radioButtonC"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            />-->
+<!--    </RadioGroup>-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="P"-->
+<!--        android:textColor="#00FF00"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:layout_marginRight="123dp"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="A"-->
+<!--        android:textColor="#FF0000"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:layout_marginRight="75dp"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textStyle="bold"-->
+<!--        android:text="L"-->
+<!--        android:textColor="#FFA500"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:layout_marginRight="28dp"/>-->
+
+
+    <TextView
+        android:id="@+id/btnPresent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="12sp"
+        android:background="@drawable/attendance_drawable"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/btnAbsent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:layout_marginLeft="8dp"
+        android:textSize="12sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/attendance_drawable"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/btnLeave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="L"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="12sp"
+        android:background="@drawable/attendance_drawable"
+        android:gravity="center"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,229 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_background"
+    tools:context="Fragments.Fragment.FeeParticular">
+
+    <!--  Heading Layout    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/heading_background">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Settings"
+            android:textColor="@color/heading_text_color"
+            android:textSize="@dimen/heading_text_size"
+            style="@style/heading_text_style"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:layout_marginLeft="16dp"
+            android:textColor="#000000"
+            android:textSize="@dimen/heading_text_size"
+            android:layout_gravity="center"
+            style="@style/heading_text_style" />
+
+        <TextView
+            android:layout_weight="1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fee Challhan Details"
+            android:textColor="@color/heading_text_color"
+            android:textSize="@dimen/heading_text_size"
+
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            style="@style/title_text_style"/>
+    </LinearLayout>
+    <!--  Main Layout    -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <!--    Bank Logo Layout  -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:backgroundTint="#EEEEEE"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="2dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="70dp"
+
+                        android:background="@drawable/teacherprofile" />
+
+
+
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="100dp"
+                        android:textColor="@color/global_textview_color"
+
+                        android:backgroundTint="@color/global_button_background"
+                        android:text="Upload"
+                        />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/global_textview_color"
+
+                    android:layout_marginLeft="12dp"
+                    android:text="Bank Name"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:hint=" Your Bank Name"
+                    android:background="@drawable/edit_text_background1">
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/global_textview_color"
+                    android:layout_marginLeft="12dp"
+                    android:text="Bank/Branch Address*"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:hint=" Your Bank/Branch Address*"
+                    android:background="@drawable/edit_text_background1">
+                </EditText>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/global_textview_color"
+                   android:layout_marginLeft="12dp"
+                    android:text="Account Number*"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:hint=" Your Account Number*"
+                    android:background="@drawable/edit_text_background1">
+                </EditText>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/global_textview_color"
+                    android:layout_marginLeft="12dp"
+                    android:text="Instruction"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:paddingStart="10dp"
+
+                    android:hint=" Start typing..."
+                    android:background="@drawable/edit_text_background1">
+                </EditText>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Bank"
+                android:layout_margin="20dp"
+                android:textColor="@color/global_textview_color"
+                android:backgroundTint="@color/global_button_background"
+                android:layout_gravity="center">
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

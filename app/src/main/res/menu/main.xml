@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topIconMenu">
+    <item
+        android:id="@+id/action_main_item_top"
+        android:title="Main Item"
+        android:icon="@drawable/schooltransparent"
+        app:showAsAction="ifRoom">
+
+        <!-- SubMenu settings -->
+        <menu>
+            <item
+                android:id="@+id/action_sub_item_1_ms"
+                android:title="Massage"
+                android:visible="false"/>
+            <item
+                android:id="@+id/action_sub_item_3_ms"
+                android:title="Settings"
+                android:visible="false"/>
+            <item
+                android:id="@+id/action_sub_item_2_ms"
+                android:icon="@drawable/turnright"
+                app:iconTint="@color/red"
+                android:visible="false"
+                android:title="Logout" />
+        </menu>
+    </item>
+</menu>
+

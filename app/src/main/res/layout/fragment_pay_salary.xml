@@ -1,0 +1,416 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/global_background"
+    tools:context="Fragments.PaySalary">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/heading_background">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salary"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                style="@style/heading_text_style"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_weight="0.5"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pay Salary"
+                android:drawableLeft="@drawable/pay_salary"
+                android:drawablePadding="5dp"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/title_text_size"
+                android:layout_marginEnd="@dimen/title_margin_end"
+                android:layout_gravity="center_vertical"
+                android:textStyle=""/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pay Salary Form"
+                    android:textColor="@color/global_textview_color"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/sub_heading_text_size"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp"/>
+
+
+                <!-- Employee Id -->
+
+               <!-- <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/empIdLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Employee ID"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxBackgroundColor="@color/background_color_textinpulayout"
+                    android:layout_marginTop="10dp"
+                    app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                    app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                    app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                    app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+                    app:startIconDrawable="@drawable/registration_no"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmployeeId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+-->
+                <!-- Employee Name -->
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical"
+                    app:startIconDrawable="@drawable/male_svgrepo_com"
+
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Employee Name"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@drawable/male_svgrepo_com"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/etEmployeesName"
+                        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <!-- Employee Role/Position -->
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical"
+
+                    app:startIconDrawable="@drawable/occupation"
+
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="designation"
+                        android:drawablePadding="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="8dp"
+                        android:drawableLeft="@drawable/occupation"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/etEmployeesRole"
+                        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <!-- date of salary/pay -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/empSalaryDateLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date of Salary/Pay"
+                    app:helperText="Double click to Select Date"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxBackgroundColor="@color/background_color_textinpulayout"
+                    android:layout_marginTop="@dimen/layout_margin_top_text_input_layout"
+                    app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                    app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                    app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                    app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+
+                    app:startIconDrawable="@drawable/calendar"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmployeesDateOfPay"
+                        android:inputType="date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Father/Husband name -->
+
+<!--
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/empFatherNameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Father/Husband name"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxBackgroundColor="@color/background_color_textinpulayout"
+                    android:layout_marginTop="10dp"
+                    app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                    app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                    app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                    app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+                    app:startIconDrawable="@drawable/male_svgrepo_com"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFHName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+-->
+
+                <!-- Salary month -->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/border"
+                    android:orientation="vertical"
+                    app:startIconDrawable="@drawable/male_svgrepo_com"
+
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Salary Month"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@drawable/calendar"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:entries="@array/select_month"
+                        android:id="@+id/spinnerSalaryMonth"
+                        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/empSalaryAmountLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Salary Amount"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxBackgroundColor="@color/background_color_textinpulayout"
+                    android:layout_marginTop="10dp"
+                    app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                    app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                    app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                    app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+                    app:startIconDrawable="@drawable/money_svgrepo_com"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSalaryAmount"
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- deduction -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/empDeductionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Any Deduction"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxBackgroundColor="@color/background_color_textinpulayout"
+                    android:layout_marginTop="10dp"
+                    app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                    app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                    app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                    app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+                    app:startIconDrawable="@drawable/pay_svgrepo_com"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAnyDeduction"
+                        android:inputType="number"
+                        android:editable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- Net Paid -->
+
+
+                <!-- Any Bonus -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/empBonusLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Any Bonus"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxBackgroundColor="@color/background_color_textinpulayout"
+                    android:layout_marginTop="10dp"
+                    app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                    app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                    app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                    app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+                    app:startIconDrawable="@drawable/pay_svgrepo_com"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAnyBonus"
+                        android:inputType="number"
+                        android:editable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/empPaidLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Net Paid"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxBackgroundColor="@color/background_color_textinpulayout"
+                    android:layout_marginTop="10dp"
+                    app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                    app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                    app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                    app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+                    app:startIconDrawable="@drawable/wallet"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNetPaid"
+                        android:inputType="number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <Button
+                    android:onClick="submitsalarypay"
+                    android:id="@+id/btnSubmitSalary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/global_button_background"
+                    android:textColor="@color/global_button_text_color"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="16dp"/>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/loaderImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:visibility="gone"             android:src="@drawable/square_shape"/>
+    </LinearLayout>
+
+</FrameLayout>

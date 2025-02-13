@@ -1,0 +1,81 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/global_background"
+    tools:context="Fragments.Fragment.StudentIdCard">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/heading_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/heading_text_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Student"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/heading_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/student_cap_svgrepo_com"
+
+                android:layout_marginEnd="@dimen/title_margin_end"
+                android:text="Student ID Card"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/title_text_size" />
+        </LinearLayout>
+
+        <!-- SearchView to search items -->
+        <androidx.appcompat.widget.SearchView
+            android:layout_margin="10dp"
+            android:id="@+id/searchView"
+            android:background="@drawable/background_mark_grading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:queryHint="Search..."/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewStudentIdCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="45dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

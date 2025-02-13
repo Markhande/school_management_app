@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.SendMessageAdmin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/heading_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_weight="0.5"
+            android:text="Messaging"
+            android:textColor="@color/global_button_text_color"
+            android:textSize="@dimen/heading_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:layout_marginRight="30dp"
+            android:text="|"
+            android:textColor="@color/global_button_text_color"
+            android:textSize="@dimen/heading_text_size"
+            android:textStyle="bold" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="15dp"
+            android:drawablePadding="8dp"
+            android:drawableLeft="@drawable/message"
+            android:text="Send Message"
+            android:textColor="@color/global_button_text_color"
+            android:textSize="@dimen/title_text_size"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                app:cardCornerRadius="10dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:id="@+id/layoutVisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/writeMessage"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="40dp"
+                        android:drawableLeft="@drawable/message"
+                        android:drawablePadding="8dp"
+                        android:text="Write a New Message"
+                        android:textColor="@color/global_specific_text_color_blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:clickable="true"
+                        android:id="@+id/layoutSendmessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="00dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="Send Message To*"
+                            android:textColor="@color/global_button_text_color"
+                            android:background="@drawable/bg_presenty"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:textSize="15sp" />
+
+                        <Spinner
+                            android:visibility="gone"
+                            android:id="@+id/spSendBy1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/edit_text_background2"
+                            android:entries="@array/All_Student" />
+                        <Spinner
+                            android:id="@+id/spSendBy2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/background_border_radius"
+                            android:entries="@array/AllStudent" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/background_border_radius"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="5dp"
+                                android:padding="5dp"
+                                android:text="select"
+                                android:textSize="16sp" />
+
+                            <Spinner
+                                android:id="@+id/AvailableData"
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <EditText
+                            android:id="@+id/edtwriteMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:padding="15dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/background_border_radius"
+                            android:gravity="start|top"
+                            android:hint="Write a message here...."
+                            android:scrollbars="vertical"
+                            android:overScrollMode="always"
+                            android:inputType="textMultiLine"
+                            android:scrollHorizontally="false"
+                            android:focusableInTouchMode="true" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_gravity="center"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="4dp"> <!-- Optional: shadow effect -->
+
+                            <ImageView
+                                android:src="@drawable/uploadicon"
+                                android:id="@+id/imageStudent"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:scaleType="centerCrop" />
+                        </androidx.cardview.widget.CardView>
+<!--                        <LinearLayout-->
+<!--                            android:layout_margin="10dp"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_weight="1.0">-->
+
+<!--                            -->
+<!--                        </LinearLayout>-->
+
+
+                        <Button
+                            android:visibility="gone"
+                            android:id="@+id/textAttach"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="16dp"
+                            android:backgroundTint="#619534"
+                            android:drawableLeft="@drawable/attachfile"
+                            android:text="Attach File"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/background_global" />
+
+                        <Button
+                            android:id="@+id/btnAddMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="16dp"
+                            android:backgroundTint="#2979FF"
+                            android:drawableLeft="@drawable/sendmessage"
+                            android:text="Send a Message"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/refreshImageLayout"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/edit_text_background">
+
+                    <ImageView
+                        android:id="@+id/refreshImage"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/all_messages">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_margin="5dp"
+                        android:id="@+id/RefreshAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:drawablePadding="4dp"
+                        android:text="Refresh"
+                        android:textColor="#2D68CA"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <!--<LinearLayout
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/edit_text_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/send_message"
+                        android:drawablePadding="4dp"
+                        android:text="Sent"
+                        android:textStyle="bold"
+                        android:textColor="#619534"
+                        android:textSize="16sp"/>
+
+
+                </LinearLayout>
+-->
+
+                <!--<LinearLayout
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Received"
+                        android:drawableLeft="@drawable/receive_msg"
+                        android:drawablePadding="4dp"
+                        android:textStyle="bold"
+                        android:textColor="#EB0909"
+                        android:textSize="16sp"/>
+
+                </LinearLayout>
+-->
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/GetMessageRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp" />
+
+            <TextView
+                android:id="@+id/txtForDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No data available of Message."
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="16dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="150dp"
+                android:clickable="true"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</FrameLayout>

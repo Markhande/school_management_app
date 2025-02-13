@@ -1,0 +1,25 @@
+<!-- item_subject.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <!-- Subject Name TextView -->
+    <TextView
+        android:id="@+id/tvSubjectName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject Name"
+        android:textSize="16sp" />
+
+    <!-- Marks TextView -->
+    <TextView
+        android:id="@+id/tvMarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marks"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"/>
+</LinearLayout>

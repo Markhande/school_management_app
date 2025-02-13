@@ -1,0 +1,42 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:src="@drawable/boxingday"
+        android:layout_gravity="end"
+        android:layout_height="60dp"/>
+
+
+<EditText
+    android:padding="8dp"
+    android:background="@drawable/border"
+    android:id="@+id/etMessage"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="Enter your message"
+android:inputType="textMultiLine"
+android:lines="4"
+android:gravity="start|top"
+android:layout_marginBottom="8dp" />
+
+
+    <!-- Add margin at bottom for better spacing -->
+
+    <!-- Optional ImageView for attachment (currently commented out) -->
+    <!--
+    <ImageView
+        android:id="@+id/ivAttachment"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Attachment Image" />
+    -->
+
+    </LinearLayout>

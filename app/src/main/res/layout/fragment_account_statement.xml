@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_background"
+    tools:context=".Fragments.AccountStatement">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/heading_background">
+
+            <TextView
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                style="@style/heading_text_style"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Statement"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/title_text_size"
+                android:drawableLeft="@drawable/accountstatement"
+                android:drawablePadding="8dp"
+
+                android:layout_marginEnd="@dimen/title_margin_end"
+                android:layout_gravity="center_vertical"
+                android:textStyle=""/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/etFromDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="From Date"
+                    android:inputType="date"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/edit_text_background1"
+                    android:layout_marginEnd="8dp" />
+
+                <EditText
+                    android:id="@+id/etToDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="To Date"
+                    android:inputType="date"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:background="@drawable/edit_text_background1"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnGenerateStatement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Generate"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/green"
+                    android:textColor="@android:color/white"
+                    android:padding="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/ivFilter"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/searchstudent"
+                    android:contentDescription="Filter"
+                    android:layout_marginEnd="16dp" />
+
+                <ImageView
+                    android:id="@+id/ivDelete"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/deletestudent"
+                    android:contentDescription="Delete" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/background_list">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:gravity="center"
+                    android:textColor="@color/global_button_text_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Description"
+                    android:gravity="center"
+
+                    android:textStyle="bold"
+                    android:textColor="@color/global_button_text_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Debit"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/global_button_text_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="Credit"
+                    android:textStyle="bold"
+                    android:textColor="@color/global_button_text_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balance"
+                    android:gravity="end"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/global_button_text_color" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewAccountStatement"
+                android:layout_width="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/background_border_radius"
+                android:padding="8dp"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

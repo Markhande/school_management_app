@@ -1,0 +1,96 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_background"
+    tools:context="Fragments.ClassWithSubject">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--  Heading Layout    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/heading_background">
+
+            <TextView
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                style="@style/heading_text_style"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject With Class"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/title_text_size"
+                android:drawablePadding="8dp"
+                android:drawableLeft="@drawable/book_open_svgrepo_com"
+                android:layout_marginEnd="@dimen/title_margin_end"
+                android:layout_gravity="center_vertical"
+                android:textStyle=""/>
+        </LinearLayout>
+
+
+        <!-- RecyclerView for class list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="visible"
+            android:id="@+id/recyclerclasswithsubject"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/SubjectNotAvailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/add"
+                android:layout_width="200dp"
+                android:layout_height="200dp">
+
+            </ImageView>
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class With Subejct Not Assigned"
+                android:textSize="20dp"
+                android:textStyle="bold">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</FrameLayout>

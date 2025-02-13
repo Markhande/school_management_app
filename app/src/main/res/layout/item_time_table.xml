@@ -1,0 +1,86 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_border_radius"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:background="@drawable/bg_presenty"
+                    android:id="@+id/className"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class Name"
+                    android:textSize="16sp"
+                    android:paddingRight="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+
+                    android:textStyle="bold"
+                    android:textColor="@color/global_button_text_color" />
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:id="@+id/updated"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:background="@drawable/circle"
+                android:contentDescription="Edit"
+                android:scaleType="centerCrop"
+                android:src="@drawable/editstudent" />
+
+            <ImageView
+                android:id="@+id/deleted"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle"
+                android:src="@drawable/deletestudent"
+                android:contentDescription="Delete" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/additionalImageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/linearLayout"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imagenotfound"
+
+            android:layout_marginTop="16dp"
+            android:contentDescription="Additional Image" />
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>

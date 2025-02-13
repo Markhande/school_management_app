@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/global_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cancel"
+            android:layout_gravity="end" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#90EE90"
+            android:text="Add HomeWork"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sub_heading_text_size"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DD/MM/YY"
+            app:boxStrokeWidth="2dp"
+            app:hintTextAppearance="@style/CustomLabelTextAppearance"
+            app:boxStrokeErrorColor="@color/red"
+            app:boxBackgroundColor="@color/background_color_textinpulayout"
+            android:layout_marginTop="@dimen/layout_margin_top_text_input_layout"
+            app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+            app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+            app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+            app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+            app:startIconDrawable="@drawable/calendar"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDateHomeWork"
+                android:inputType="date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Sent By Section -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"
+                android:text="Sent by" />
+
+            <Spinner
+                android:id="@+id/edtSendBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Admin" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!-- Select Class Section -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"
+                android:text="Select Class" />
+
+            <Spinner
+                android:id="@+id/edtClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Class" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:visibility="gone"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"
+                android:text="Select Class" />
+
+            <TextView
+                android:id="@+id/edtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Class" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"
+                android:text="Subject" />
+
+            <Spinner
+                android:id="@+id/edtSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Subject" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <EditText
+            android:id="@+id/edtHomeWorkDetail"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:hint="HomeWork Detail"
+            android:minLines="5"
+            android:gravity="top"
+            android:scrollbars="vertical"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/edit_text_background2" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"> <!-- Optional: shadow effect -->
+
+            <ImageView
+                android:src="@drawable/uploadicon"
+                android:id="@+id/imageStudent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/IdHomework"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/classID"
+            android:layout_width="wrap_content"
+            android:text=""
+            android:layout_height="wrap_content"/>
+     <!--   <Button
+            android:id="@+id/textAttach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/global_button_background"
+            android:drawableLeft="@drawable/attachfile"
+            android:text="Attach File"
+            android:textColor="@color/global_button_text_color"
+            android:textStyle="bold" />
+-->
+
+        <Button
+            android:id="@+id/btnAddHomeworks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/global_button_background"
+            android:text="Submit"
+            android:textColor="@color/global_button_text_color"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

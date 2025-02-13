@@ -1,0 +1,176 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Fragments.CollectionFee">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/heading_background">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fees"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                style="@style/heading_text_style"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:layout_marginLeft="40dp"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/title_margin_end"
+            android:drawableLeft="@drawable/feeparticulars"
+            android:drawablePadding="5dp"
+            android:text="Collection Fees"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCollectSingleStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Collect fees for single student"
+            android:textSize="20sp"
+            android:layout_margin="16dp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_border_radius"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Select Class"
+                android:drawablePadding="5dp"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/AllClassName"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/onlyId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search student"
+            android:background="@drawable/edit_text_background1"
+            android:layout_marginBottom="16dp" />
+        <LinearLayout
+            android:id="@+id/layoutAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_list"
+            android:orientation="horizontal">
+
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID"
+                android:layout_marginLeft="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_gravity="center"/>
+-->
+
+            <TextView
+                android:id="@+id/tvStudentName1"
+                android:layout_width="269dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:text="Student Name"
+                android:textColor="@color/global_button_text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- <TextView
+                 android:id="@+id/tvStudentName2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textStyle="bold"
+                 android:text="Status"
+                 android:textColor="@color/black"
+                 android:layout_gravity="center"
+                 android:textSize="18sp"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintRight_toRightOf="parent"
+                 android:layout_marginRight="35dp"
+                 />-->
+
+
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewFeesStudentNames"
+            android:background="@drawable/background_border_radius"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/txtForDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No data available. Click to add Students."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="110dp"
+        android:clickable="true"
+        android:visibility="visible" />
+
+
+</FrameLayout>

@@ -1,0 +1,144 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/global_background"
+    tools:context="Fragments.SalarySlip">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/heading_background">
+
+            <TextView
+                android:layout_weight="1.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Employees"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_weight="1.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+
+
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textStyle="bold" />
+
+            <!--        android:drawableLeft="@drawable/student_cap_svgrepo_com"-->
+            <TextView
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Employees Salary Slip"
+                android:drawableLeft="@drawable/student_cap_svgrepo_com"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/title_text_size"
+                android:drawablePadding="8dp"
+
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="center_vertical"
+                android:textStyle="" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchViewSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search here"
+            android:iconifiedByDefault="false"
+            android:layout_margin="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/background_border_radius"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:background="@color/global_button_background"> <!-- Adjusted to give space for SearchView -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="Sr No."
+                android:textColor="@color/global_button_text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/employeeNameTextView"
+                android:layout_width="197dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:text="Employees Name"
+                android:textColor="@color/global_button_text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Title TextView -->
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Role"
+                android:textColor="@color/global_button_text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/salarySlipRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txtForDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No data available of Salary Slip. Click Here To Add"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:clickable="true"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

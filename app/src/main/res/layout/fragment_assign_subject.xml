@@ -1,0 +1,849 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_background"
+    tools:context="Fragments.AssignSubject">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Subject_Assign_heading_height"
+            android:background="@drawable/heading_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_weight="0.5"
+                android:text="Subject"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="|"
+
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/Subject_Assign_margin_end"
+
+                android:drawableLeft="@drawable/book_svgrepo_com"
+                android:drawablePadding="8dp"
+                android:gravity="end"
+                android:text="Assign Subject"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/title_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAddNewClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Assign Subject"
+            android:textColor="@color/global_textview_color"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/Subject_Assign_margin_start"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/Subject_Assign_margin_end"
+                android:background="@drawable/edit_text_background"
+                android:orientation="vertical"
+                android:padding="@dimen/Subject_Assign_padding">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvAddNewClassbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Class Not Available clicked to add new class"
+                    android:textStyle="bold"
+                    android:textSize="15dp">
+
+                </TextView>
+
+                <LinearLayout
+                    android:visibility="visible"
+                    android:id="@+id/assignLayout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--  layout first-->
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="5dp"
+                            android:padding="5dp"
+                            android:text="Select Class"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/SelectClass"
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+
+                            />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/categoryConnectionLayout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Enter Category of Connection"
+                            android:padding="5dp"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/categoryConnectionEt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/border"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="5dp"
+                            android:padding="5dp"
+                            android:text="select Class Id"
+                            android:textSize="16sp" />
+
+                        <Spinner
+                            android:id="@+id/SelectClassId"
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+
+                            />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Enter Category of Connection"
+                            android:padding="5dp"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:background="@drawable/bg_presenty"
+                                android:text="@string/subject_name"
+                                android:textColor="@color/global_button_text_color" />
+
+                            <EditText
+                                android:id="@+id/etSubjectName"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/name_hint"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="Marks"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:background="@drawable/bg_presenty"
+                                android:textColor="@color/global_button_text_color" />
+
+                            <EditText
+                                android:id="@+id/rdtMark"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/total_exam_hint"
+                                android:inputType="number"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--  layout Sencond-->
+                    <LinearLayout
+                        android:id="@+id/layoutSecond"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/subject_name"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/SubjectName2"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/name_hint"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/marks"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/rdtMark2"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/total_exam_hint"
+                                android:inputType="number"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--  layout third-->
+                    <LinearLayout
+                        android:id="@+id/layoutthird"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/subject_name"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/SubjectName3"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/name_hint"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/marks"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/rdtMark3"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/total_exam_hint"
+                                android:inputType="number"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--  layout fourth-->
+                    <LinearLayout
+                        android:id="@+id/layoutFourth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/subject_name"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/SubjectName4"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/name_hint"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/marks"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/rdtMark4"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/total_exam_hint"
+                                android:inputType="number"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--  layout fifth-->
+                    <LinearLayout
+                        android:id="@+id/layoutFifth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/subject_name"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/SubjectName5"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/name_hint"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/marks"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/rdtMark5"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/total_exam_hint"
+                                android:inputType="number"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--  layout six-->
+                    <LinearLayout
+                        android:id="@+id/layoutSixth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/subject_name"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/SubjectName6"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/name_hint"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/marks"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/rdtMark6"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/total_exam_hint"
+                                android:inputType="number"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--  layout Seventh-->
+                    <LinearLayout
+                        android:id="@+id/layoutSeventh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/subject_name"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/SubjectName7"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/name_hint"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/marks"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/rdtMark7"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/total_exam_hint"
+                                android:inputType="number"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--  layout Eighth-->
+                    <LinearLayout
+                        android:id="@+id/layoutEighth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/subject_name"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/SubjectName8"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/name_hint"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/marks"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/rdtMark8"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/total_exam_hint"
+                                android:inputType="number"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--  layout Ninth-->
+                    <LinearLayout
+                        android:id="@+id/layoutNinth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/subject_name"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/SubjectName9"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/name_hint"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/marks"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/rdtMark9"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/total_exam_hint"
+                                android:inputType="number"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--  layout Tenth-->
+                    <LinearLayout
+                        android:id="@+id/layoutTenth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/subject_name"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/SubjectName10"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/name_hint"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/marks"
+                                android:textColor="@color/white" />
+
+                            <EditText
+                                android:id="@+id/rdtMark10"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:background="@drawable/linear_admission_bg"
+                                android:hint="@string/total_exam_hint"
+                                android:inputType="number"
+                                android:paddingStart="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ltAddMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:background="@drawable/background_assign_subject_add_more"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/baseline_add_24" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:padding="5dp"
+                                android:text="@string/add_more"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ltRemove"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:background="@drawable/background_assign_subject_remove"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/right" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/remove"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnAssignSubject"
+                        android:layout_width="200dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/global_button_background"
+                        android:gravity="center"
+                        android:text="@string/assign_subject_button"
+                        android:textColor="@color/global_button_text_color"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</FrameLayout>

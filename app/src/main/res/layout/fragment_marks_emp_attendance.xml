@@ -1,0 +1,416 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Fragments.MarksEmpAttendance">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/heading_background">
+
+            <TextView
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attendance"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                style="@style/heading_text_style"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/heading_text_size"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark Attendance"
+                android:textColor="@color/heading_text_color"
+                android:textSize="@dimen/title_text_size"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/mark_attendance"
+                android:layout_marginEnd="@dimen/title_margin_end"
+                android:layout_gravity="center_vertical"
+                android:textStyle=""/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:contentPadding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mark Employee Attendance"
+                            android:textColor="@android:color/black"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="16dp"
+                            android:textSize="@dimen/sub_heading_text_size"
+                            android:textStyle="bold"/>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="DD/MM/YY"
+                            app:helperText="Double click to Select Date"
+                            app:boxStrokeWidth="2dp"
+                            app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                            app:boxStrokeErrorColor="@color/red"
+                            app:boxBackgroundColor="@color/background_color_textinpulayout"
+                            android:layout_marginTop="@dimen/layout_margin_top_text_input_layout"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginLeft="16dp"
+                            app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                            app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                            app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                            app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+
+                            app:startIconDrawable="@drawable/calendar"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/dateofDateWise"
+                                android:inputType="date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/border"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:padding="5dp"
+                                android:drawablePadding="5dp"
+                                android:text="Select Role"
+                                />
+
+                            <Spinner
+                                android:id="@+id/txtRole"
+                                android:entries="@array/select_Rol_Employees"
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="---Select Employee Role---"
+                                android:padding="5dp"
+
+                                />
+
+
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/border"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:padding="5dp"
+                                android:drawablePadding="5dp"
+                                android:text="Select Class"
+                                />
+
+                            <Spinner
+                                android:id="@+id/txtonlyId"
+                                android:entries="@array/select_Rol_Employees"
+                                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="---Select Class---"
+                                android:padding="5dp"
+
+                                />
+
+
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+                        <Button
+                            android:visibility="gone"
+
+                            android:id="@+id/btnSearch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="16dp"
+                            android:textColor="@color/global_textview_color"
+
+                            android:backgroundTint="@color/global_button_background"
+                            android:text="Search" />
+
+                        <TextView
+                            android:visibility="gone"
+                            android:id="@+id/classNameText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/background_list"
+                    >
+
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/employeeNameTextView"
+                        android:layout_width="197dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Employees Name"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/global_button_text_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/titleTextView" />
+
+                    <TextView
+                        android:id="@+id/titleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Role"
+                        android:layout_marginRight="40dp"
+                        android:textColor="@color/global_button_text_color"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/statusTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+                        android:layout_marginRight="31dp"
+                        android:textColor="@color/global_button_text_color"
+                        android:layout_gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/background_border_radius"
+                    android:layout_marginLeft="10dp"
+                    android:padding="8dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/EmpRecylerView"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/background_border_radius"
+                    android:layout_marginLeft="10dp"
+                    android:padding="8dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/AttendanceRecyclerView"/>
+
+                <TextView
+                    android:id="@+id/txtForDefault"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No data available of Employees."
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="150dp"
+                    android:clickable="true"
+                    android:visibility="gone" />
+
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/global_button_text_color"
+                    android:layout_marginBottom="24dp"
+                    android:backgroundTint="@color/global_button_background"
+                    android:text="Submit" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/viewMargin"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#6A6060" />
+
+                    <!-- TextView: "Mark Attendance with card scanning" -->
+                    <TextView
+                        android:id="@+id/tvmarksAttendence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mark Attendance with card scanning"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"
+                        android:layout_marginBottom="12dp"/>
+
+                    <!-- First CardView with "Attendance Mark 1" -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="12dp"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/barcode"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="In Attendance"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/black"
+                                android:layout_marginTop="8dp"
+                                android:layout_gravity="center"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Second CardView -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="12dp"
+                        android:elevation="4dp"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/barcode"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Out Attendance"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/black"
+                                android:layout_marginTop="8dp"
+                                android:layout_gravity="center"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <!-- Dashboard -->
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/baseline_home_24"/>
+        <!-- Student Dashboard -->
+
+
+        <item
+            android:id="@+id/nav_student_details"
+            android:title="Basic Details"
+            android:visible="false"
+            android:icon="@drawable/all_messages"/>
+
+        <item
+            android:id="@+id/nav_student_Paid_fee_recipt"
+            android:title="Fee Receipt"
+            android:visible="false"
+            android:titleTextAppearance="@color/red"
+            android:icon="@drawable/baseline_home_24"/>
+
+        <item
+            android:id="@+id/nav_student_my_time_table"
+            android:title="My Time Table"
+            android:visible="false"
+            android:titleTextAppearance="@color/red"
+            android:icon="@drawable/baseline_home_24"/>
+
+
+        <item
+            android:id="@+id/nav_student_home_work"
+            android:title="Homework"
+            android:visible="false"
+            android:titleTextAppearance="@color/red"
+            android:icon="@drawable/baseline_home_24"/>
+
+        <item
+            android:id="@+id/nav_student_message"
+            android:title="Meassaging"
+            android:visible="false"
+            android:titleTextAppearance="@color/red"
+            android:icon="@drawable/baseline_home_24"/>
+
+        <item
+            android:id="@+id/nav_student_account_settings"
+            android:title="Account Settings"
+            android:visible="false"
+            android:titleTextAppearance="@color/red"
+            android:icon="@drawable/baseline_home_24"/>
+
+        <!-- student item end-->
+
+        <item
+            android:id="@+id/nav_Gsettings"
+            android:title="General Settings"
+            android:visible="false"
+            android:icon="@drawable/settings"/>
+
+        <item
+            android:id="@+id/nav_InstituteProfile"
+            android:title="Institute Profile"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_FeeParticulars"
+            android:title="Fee Particulars"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_DetailsforFeesChallahan"
+            android:title="Details for Fees Callahan"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_MarkingGrading"
+            android:title="Marking Grading"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_AccountSettings"
+            android:title="Account Settings"
+            android:visible="false"/>
+
+
+        <item
+            android:id="@+id/nav_Event"
+            android:title="Add Event"
+            android:visible="false"/>
+        <!--    Class   -->
+        <item
+            android:id="@+id/nav_Class"
+            android:title="Classes"
+            android:visible="false"
+            android:icon="@drawable/class2"/>
+
+        <item
+            android:id="@+id/nav_AllClasses"
+            android:title="All Class"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_NewClass"
+            android:title="New Class"
+            android:visible="false"/>
+
+
+        <item
+            android:id="@+id/nav_Subject"
+            android:title="Subject"
+            android:visible="false"
+            android:icon="@drawable/baseline_menu_book_24"/>
+
+        <item
+            android:id="@+id/nav_ClassWithSubject"
+            android:title="Subject With Class"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_AssignSubject"
+            android:title="Create Subject"
+            android:visible="false"/>
+
+        <!-- Students -->
+        <item
+            android:id="@+id/nav_Student"
+            android:title="Students"
+            android:visible="false"
+            android:icon="@drawable/student1"/>
+
+        <item
+            android:id="@+id/nav_AllStudents"
+            android:title="All Students "
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_AddStudent"
+            android:title="Add Student"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_AdmissionLetter"
+            android:title="Student basic Information"
+            android:visible="false"/>
+
+        <!--        <item-->
+        <!--            android:id="@+id/nav_PrintBasicList"-->
+        <!--            android:title="Print Basic List"-->
+        <!--            android:visible="false"/>-->
+
+        <item
+            android:id="@+id/nav_PromoteStudents"
+            android:title="Promote Students"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_StudentIDCards"
+            android:title="Student ID Cards"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_Employee"
+            android:title="Employees"
+            android:icon="@drawable/employees"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_AllEmployees"
+            android:title="All Employees"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_AddNewEmployees"
+            android:title="Add New Employees"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_JobLetters"
+            android:title="Offer Letter"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_Accounts"
+            android:title="Accounts"
+            android:visible="false"
+            android:icon="@drawable/account"/>
+
+        <item android:id="@+id/nav_CharofAccount"
+            android:title="Account Head"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_AddIncome"
+            android:title="Add Income"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_AddExpense"
+            android:title="Add Expense"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_AccountStatement"
+            android:title="Account Statement"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_Fees"
+            android:title="Fees"
+            android:visible="false"
+            android:icon="@drawable/fees"/>
+
+
+        <!--        <item android:id="@+id/nav_GenerateBankCallahan"-->
+        <!--            android:title="Generate Bank Callahan"-->
+        <!--            android:visible="false"/>-->
+
+        <item android:id="@+id/nav_Collectionfee"
+            android:title="Collection fee"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_FeeSlip"
+            android:title="Fee Slip"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_FeesDefaulter"
+            android:title="Fees Defaulter"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_salary"
+            android:title="Salary"
+            android:visible="false"
+            android:icon="@drawable/salary"/>
+
+        <item android:id="@+id/nav_PaySalary"
+            android:title="Pay Salary"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_SalarySlip"
+            android:title="Salary Slip"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_Attendance"
+            android:title="Attendance"
+            android:visible="false"
+            android:icon="@drawable/attendance"/>
+
+        <item android:id="@+id/nav_MarksStudentAttendance"
+            android:title="Mark Student Attendance"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_StudentAttendanceReport"
+            android:title="Student Attendance Report"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_MarksEmpAttendance"
+            android:title="Mark Employee Attendance"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_EmployeeAttendanceReport"
+            android:title="Employee Attendance Report"
+            android:visible="false"/>
+
+        <item android:id="@+id/nav_TimeTable"
+            android:title="Time Table"
+            android:visible="false"
+            android:icon="@drawable/table"/>
+
+        <item android:id="@+id/nav_Homework"
+            android:title="Homework"
+            android:visible="false"
+            android:icon="@drawable/homework"/>
+
+        <item android:id="@+id/nav_Messages"
+            android:title="Messages"
+            android:visible="false"
+            android:icon="@drawable/message"/>
+
+    </group>
+
+    <item android:title="">
+
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:title="Logout"
+                android:icon="@drawable/exit"/>
+        </menu>
+    </item>
+
+</menu>

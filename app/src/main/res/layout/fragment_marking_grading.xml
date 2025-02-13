@@ -1,0 +1,894 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_background"
+    tools:context="Fragments.Fragment.MarkingGrading">
+
+    <!--  Heading Layout    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/heading_background">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Settings"
+            android:textColor="@color/heading_text_color"
+            android:textSize="@dimen/heading_text_size"
+            style="@style/heading_text_style"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textColor="@color/heading_text_color"
+            android:textSize="@dimen/heading_text_size"
+            android:layout_gravity="center_vertical"
+            style="@style/heading_text_style" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marking grading"
+            android:textColor="@color/heading_text_color"
+            android:textSize="@dimen/title_text_size"
+            android:drawableLeft="@drawable/marking_and_grading"
+            android:layout_marginEnd="@dimen/title_margin_end"
+            android:drawablePadding="8dp"
+            android:layout_gravity="center_vertical"
+            style="@style/title_text_style"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_marginEnd="15dp"
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:text="Marks Grading"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="#64B5F6"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:layout_marginStart="15dp"
+            android:layout_weight="0.5"
+            android:text="Fail Criteria"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="#FF7943"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="110dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="00dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+
+                            android:text="Grade" />
+                        <EditText
+                            android:id="@+id/EditGrad"
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+
+                            android:textColor="@color/global_textview_color"
+
+                            android:text="A+"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%From" />
+                        <EditText
+                            android:id="@+id/EditFrom"
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+
+                            android:text="80"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%Upto" />
+                        <EditText
+                            android:id="@+id/Editupto"
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+
+                            android:text="100"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Status" />
+                        <EditText
+                            android:id="@+id/EditStatus"
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="Pass"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Grade" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="A"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%From" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="70"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%Upto" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="79"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Status" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="Pass"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Grade" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="B+"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%From" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="60"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%Upto" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="69"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Status" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="Pass"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Grade" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="B"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%From" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="50"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%Upto" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="59"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Status" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="Pass"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Grade" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="C"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%From" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="40"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%Upto" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="49"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Status" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="Pass"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Grade" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="D"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%From" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="35"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%Upto" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="39"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Status" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="pass"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Grade" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="F"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%From" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="0"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="%Upto" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="34"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/global_textview_color"
+                            android:layout_gravity="center"
+                            android:text="Status" />
+                        <EditText
+                            android:gravity="center"
+                            android:layout_width="80dp"
+                            android:layout_height="45dp"
+                            android:textColor="@color/global_textview_color"
+                            android:text="fail"
+                            android:background="@drawable/background_mark_grading"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:background="@drawable/background_assign_subject_add_more"
+                android:layout_margin="10dp"
+                android:layout_gravity="end"
+                android:padding="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/baseline_add_24"/>
+                <TextView
+                    android:layout_margin="8dp"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add More Option">
+                </TextView>
+            </LinearLayout>
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/delete">
+            </ImageView>
+
+        <Button
+            android:id="@+id/btnSubmitMark"
+            android:layout_gravity="center"
+            android:layout_margin="25dp"
+            android:layout_width="wrap_content"
+            android:text="Save Change"
+            android:backgroundTint="@color/global_button_background"
+            android:textColor="@color/global_button_text_color"
+
+            android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,350 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_background"
+    tools:context="Fragments.Fragment.InstituteProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/heading_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:layout_weight="0.5"
+            android:text="General Settings"
+            android:textColor="@color/heading_text_color"
+            android:textSize="@dimen/heading_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:text="|"
+            android:gravity="center"
+            android:textColor="@color/heading_text_color"
+            android:textSize="@dimen/heading_text_size"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="2dp"
+            android:drawablePadding="8dp"
+            android:drawableLeft="@drawable/baseline_account_balance_24"
+            android:text="Institite Profile"
+            android:textColor="@color/heading_text_color"
+            android:textSize="@dimen/title_text_size" />
+    </LinearLayout>
+
+
+
+
+
+
+    <ScrollView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Account Settings" >
+
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="Institite Profile"
+                android:textColor="@color/global_textview_color"
+                android:textSize="@dimen/sub_heading_text_size"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="1dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="2dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp">
+
+                        <ImageView
+                            android:id="@+id/ivImageLog"
+                            android:src="@drawable/imagenotfound"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="40dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/deeleteclass"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DeleteClass"
+                                android:textStyle="bold"
+                                android:layout_gravity="center_horizontal"
+                                android:textSize="16dp"
+                                android:textColor="@color/black"/>
+
+                            <Button
+                                android:layout_gravity="center"
+                                android:id="@+id/UpdateLogo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/global_button_text_color"
+                                android:textStyle="bold"
+                                android:backgroundTint="@color/green"
+                                android:text="Update logo" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name of Institute"
+                    app:startIconDrawable="@drawable/nameofinstitue"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxBackgroundColor="@color/background_color_textinpulayout"
+                    android:layout_marginTop="@dimen/layout_margin_top_text_input_layout"
+                    app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                    app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                    app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                    app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNameOfInstitute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tag Line"
+                    app:startIconDrawable="@drawable/taglinenew"
+                    app:boxStrokeWidth="2dp"
+                    app:boxBackgroundColor="@color/background_color_textinpulayout"
+                    android:layout_marginTop="@dimen/layout_margin_top_text_input_layout"
+                    app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                    app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                    app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                    app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+                    app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                    app:boxStrokeErrorColor="@color/red"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etTargetLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number"
+                    app:startIconDrawable="@drawable/phonenumber4"
+                    app:boxStrokeWidth="2dp"
+                    app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                    app:boxStrokeErrorColor="@color/red"
+                    app:boxBackgroundColor="@color/background_color_textinpulayout"
+                    android:layout_marginTop="@dimen/layout_margin_top_text_input_layout"
+                    app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                    app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                    app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                    app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+<!--                    -->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPhoneNumber"
+                        android:inputType="number"
+                        android:enabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Website"
+                    app:boxBackgroundColor="@color/background_color_textinpulayout"
+                    android:layout_marginTop="@dimen/layout_margin_top_text_input_layout"
+                    app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                    app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                    app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                    app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+                    app:startIconDrawable="@drawable/website"
+                    app:boxStrokeWidth="2dp"
+                    app:helperText="if website not available type not available"
+                    app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                    app:boxStrokeErrorColor="@color/red"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:id="@+id/etWebsite"
+                        android:text="Not Available"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address"
+                    app:startIconDrawable="@drawable/address"
+                    app:boxStrokeWidth="2dp"
+                    app:boxBackgroundColor="@color/background_color_textinpulayout"
+                    android:layout_marginTop="@dimen/layout_margin_top_text_input_layout"
+                    app:boxCornerRadiusBottomStart="@dimen/boxCornerRadiusBottomStart"
+                    app:boxCornerRadiusBottomEnd="@dimen/boxCornerRadiusBottomEnd"
+                    app:boxCornerRadiusTopEnd="@dimen/boxCornerRadiusTopEnd"
+                    app:boxCornerRadiusTopStart="@dimen/boxCornerRadiusTopStart"
+                    app:hintTextAppearance="@style/CustomLabelTextAppearance"
+                    app:boxStrokeErrorColor="@color/red"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/border"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:padding="5dp"
+                        android:text="Country"
+                        />
+
+                    <Spinner
+                        android:id="@+id/edtCountry"
+                        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/country"
+                        android:padding="5dp"
+
+                        />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/categoryConnectionLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"
+                        android:hint="Enter Category of Connection"
+                        android:padding="5dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/categoryConnectionEt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <Button
+                    android:id="@+id/btnSubmitInstituteProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update"
+                    android:drawableLeft="@drawable/update_black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="32dp"
+                    android:textColor="@color/global_button_text_color"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="@color/global_button_background"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
